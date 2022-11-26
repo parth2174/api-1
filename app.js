@@ -7,8 +7,8 @@ dotenv.config()
 let port = process.env.PORT || 8230;
 //const mongoUrl = "mongodb://localhost:27017"
 const mongoLiveUrl = "mongodb+srv://parthsheth:parth5196@cluster0.zi1ko.mongodb.net/EcommerceWebsiteData?retryWrites=true&w=majority";
-//const bodyParser = require('body-parser');
-//const cors = require('cors');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 //const token = "8fbf8tyyt87378";
 
 
@@ -18,9 +18,9 @@ const mongoLiveUrl = "mongodb+srv://parthsheth:parth5196@cluster0.zi1ko.mongodb.
 
 
 //middleware
-/*app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json())
-app.use(cors())*/
+app.use(cors())
 
 
 app.get('/',(req,res) => {
