@@ -54,6 +54,13 @@ app.get('/Products',(req,res) => {
     })
 })
 
+app.get('/Mobiles',(req,res) => {
+    db.collection('Mobiles').find().toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
 
 
 // Connection with db
